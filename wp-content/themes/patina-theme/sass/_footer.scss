@@ -1,0 +1,15 @@
+$cream: #e9e7db;
+footer {
+	position: fixed;
+	bottom:0;
+	right:20px;
+	z-index: 998;
+	width: 100vw;
+	height: auto;
+	display: block;
+	clear: both;
+	color: $cream;
+	font-family: serif;
+	font-size: 10px;
+	text-align: right;
+}

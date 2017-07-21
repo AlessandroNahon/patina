@@ -1,0 +1,119 @@
+// @font-face {
+// 	font-family: 'Warnock Semibold';
+// 	src: url('fonts/Semibold/WarnockPro-Semibold.eot');
+// 	src: url('fonts/Semibold/WarnockPro-Semibold.eot?#iefix') format('embedded-opentype'),
+// 		url('fonts/Semibold/WarnockPro-Semibold.woff') format('woff'),
+// 		url('fonts/Semibold/WarnockPro-Semibold.ttf') format('truetype');
+// 	font-weight: 600;
+// 	font-style: normal;
+// }
+
+// @font-face {
+// 	font-family: 'Warnock Regular';
+// 	src: url('fonts/Regular/WarnockPro-Regular.eot');
+// 	src: url('fonts/Regular/WarnockPro-Regular.eot?#iefix') format('embedded-opentype'),
+// 		url('fonts/Regular/WarnockPro-Regular.woff') format('woff'),
+// 		url('fonts/Regular/WarnockPro-Regular.ttf') format('truetype');
+// 	font-weight: normal;
+// 	font-style: normal;
+// }
+
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400');
+
+a {
+	color: #BA209B;
+	text-decoration: none;
+	&:hover {
+		color: #D424B1;
+	}
+}
+
+/* paragraphs */
+
+p {
+	line-height: 1.5;
+}
+
+/*blockquotes*/
+
+blockquote {
+	background: #F7F7F7;
+	margin: 0;
+	padding: 20px;
+	p {
+		margin-top: 0;
+	}
+}
+
+/*tables*/
+
+table {
+	td {
+		padding: 10px;
+	}
+	tr td:first {
+		padding-right: 0;
+	}
+}
+
+/*def lists*/
+
+dt {
+	font-weight: 600;
+	padding-bottom: 5px;
+}
+
+dd {
+	padding: 10px;
+	margin-left: 10px;
+}
+
+/*lists*/
+
+ul li, ol li {
+	padding: 3px;
+}
+
+/*PRE*/
+
+pre {
+	background: #F7F7F7;
+	padding: 10px;
+	border-radius: 4px;
+	border: 1px solid #ccc;
+}
+
+
+/*
+====================================
+Global Classes / Wordpress Specific
+====================================
+*/
+
+.aligncenter {
+	text-align: center;
+	margin: 0 auto;
+}
+
+.alignleft {
+	float: left;
+}
+
+.alignright {
+	float: right;
+}
+
+img {
+	&.alignleft {
+		padding-right: 5px;
+	}
+	&.alignright {
+		padding-left: 5px;
+	}
+}
+
+.clear {
+	width: 100%;
+	float: left;
+	clear: both;
+}

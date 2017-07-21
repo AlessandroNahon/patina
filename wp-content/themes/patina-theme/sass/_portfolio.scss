@@ -1,0 +1,372 @@
+$cream: #e9e7db;
+
+#portfolio {
+	width: 100vw;
+	height: 100vh;
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin:0 auto;
+	font-family: 'Lato', sans-serif;
+	font-weight: 300;
+	letter-spacing: .025em;
+	display: flex;
+	justify-content:center;
+	align-content:center;
+	align-items:center;
+	@include breakpoint($phone) {
+		// height: 260vh;
+		height: 420vh;
+		background-repeat: repeat;
+		background-size: 100vh 100vw;
+	}
+	.container {
+		// background-color: rgba(48,21,14,.9);
+		width: 80vw;
+		max-width: 1000px;
+		height: 50vh;
+		top:15%;
+		margin:0 auto;
+		height: auto;
+		display: flex;
+		flex-wrap:wrap;
+		justify-content:space-between;
+		align-content:center;
+		align-items:center;
+		position: absolute;
+		left:50%;
+		transform: translateX(-50%);
+		@include breakpoint($phone) {
+			// padding-top: 100px;
+			height: 420vh;
+			width: 300px;
+			top:0;
+			transform: translate(-50%,0);
+		}
+		.thumbnail {
+			display: flex;
+			flex-direction:column;
+			justify-content:space-around;
+			align-content:space-around;
+			align-items:space-around;
+			color: $cream;
+			// height: 350px;
+			// margin-bottom: 25px;
+			h3 {
+				padding:0;
+				margin:0;
+				padding: 5px 0;
+				font-size: 14px;
+			}
+			.thumbnail-desc {
+				// padding-top: 25px;
+				width: 300px;
+				height: 100px;
+				// padding:0 15px;
+				border-top: 1px solid rgba(233,231,219,.5);
+				p {
+					padding:0;
+					margin:0;
+					font-size: 12px;
+					&:nth-child(1) {
+
+					}
+					&:nth-child(3) {
+						padding-top: 5px;
+						font-size: 12px;
+						font-weight: 400;
+					}
+				}
+			}
+			.thumbnail-img {
+				width: 100%;
+				position: relative;
+				z-index: 100;
+				cursor: zoom-in;
+				padding-bottom: 10px;
+				img {
+					max-height: 200px;
+					max-width: 300px;
+					margin:0 auto;
+					width: 100%;
+				}
+			}
+		}
+		.overlay {
+			display: block;
+			position:absolute;
+			width:100vw;
+			height:100vh;
+			background-color: rgba(28,28,28,0.95);
+			top:-25%;
+			left:-50%;
+			bottom:0;
+			right:0;
+			margin:0;
+			z-index: -1;
+			@include breakpoint($phone) {
+				display: none;
+			}
+		}
+		.slide-gallery {
+			width: 50vw;
+			height: 60vh;
+			background-color: rgba(233,231,219,1);
+			position: absolute;
+			z-index: 999;
+			left:50%;
+			top:0;
+			transform: translateX(-50%);
+			@include breakpoint($phone) {
+				position: fixed;
+				height: 100vh;
+				width: 100vw;
+				top:0;
+				transform: translate(-50%, 0%);
+				z-index: 100;
+			}
+			.close {
+				position: absolute;
+				top:0px;
+				right:0px;
+				z-index: 999;
+				padding:0;
+				margin:0;
+				width: 60px;
+				height: 60px;
+				cursor: pointer;
+				@include breakpoint($phone) {
+					z-index: 999;
+					width: 40px;
+					height: 40px;
+				}
+				span {
+					background-color: $cream;
+					height: 2px;
+					width: 20px;
+					display: block;
+					position: absolute;
+					top:0;
+					left:0;
+					bottom:0;
+					right:0;
+					margin:auto;
+					@include breakpoint($phone) {
+						background-color: rgba(48,21,14,1);
+					}
+				}
+			}
+			.slider {
+				position: absolute;
+				bottom:0;
+				top:50%;
+				transform:translateY(-50%);
+				width: 75%;
+				height: 100%;
+				margin: 0 auto;
+				padding: 0;
+				position: relative;
+				z-index: 998;
+				@include breakpoint($phone) {
+					width: 100%;
+				}
+				.gallery-image {
+					width: 100%;
+					height: 100%;
+					background-size: cover;
+				}
+				.slick-track {
+					// position: absolute;
+					// top:25%;
+					// height: 100%;
+					// transform: translateY(-25%);
+					.slick-active {
+						// width: 100%;
+						// margin:0 2.5%;
+						img {
+							// width: 200%;
+							// height: auto;
+							// width: 300px;
+							// width:500px;
+						}
+					}
+					.slick-current {
+						// width: 100%;
+						// margin:0 2.5%;
+						img {
+							// width: 200%;
+							// height: auto;
+							// width: 300px;
+						}
+					}
+				}
+			}
+			.slick-list {
+				// background-color: red;
+				padding:0;
+				position: relative;
+				top:50%;
+				transform: translateY(-50%);
+				width: 100%;
+				margin:0 auto;
+
+			}
+			.slick-slide {
+				// height: auto;
+				// height: 100%;
+				// width: 100%;
+				// display: flex;
+				// justify-content:center;
+				// align-content:center;
+				// align-items:center;
+				// outline: none;
+				// margin:0 auto;
+				
+				// width: 100%;
+				a img {
+					height: 300px;
+				}
+				// @include breakpoint($tablet) {
+				// 	width: 600px;
+				// }
+				// @include breakpoint($phone) {
+				// 	width: 350px;
+				// }
+				// @include breakpoint($iPhone) {
+				// 	width: 300px;
+				// }
+				// img {
+				// 	outline: none;
+				// 	vertical-align: middle;
+				// }
+			}
+			.slick-arrow {
+				position: absolute;
+				top:50%;
+				transform: translateY(-50%);
+				z-index: 999;
+				background-color: transparent;
+				border:none;
+				outline: none;
+				height: 60px;
+				width: 60px;
+				@include breakpoint($phone) {
+					z-index: 100;
+					top: 5%;
+				} 
+			}
+			.slick-prev {
+				left:0px;
+				visibility: hidden;
+				&:after {
+					left: -100%;
+					right:100%;
+					font-size: 50px;
+					font-weight: lighter;
+					color: $cream;
+					content:'<'; 
+					visibility: visible;
+					display: block;
+					position: absolute;
+					padding-right: 25px;
+					@include breakpoint($phone) {
+						right:0;
+						left: 0;
+						right: -200%;
+						color:rgba(48,21,14,1);
+						padding-right: 0px;
+					} 
+				}
+			}
+			.slick-next {
+				right:0px;
+				visibility: hidden;
+				&:after {
+					padding-left: 25px;
+					right: -100%;
+					left:100%;
+					font-size: 50px;
+					font-weight: lighter;
+					color: $cream;
+					content:'>'; 
+					visibility: visible;
+					display: block;
+					position: absolute;
+					@include breakpoint($phone) {
+						right:0;
+						left:0;
+						left:-200%;
+						color:rgba(48,21,14,1);
+						padding-left: 0px;
+					} 
+				}
+			}
+			.slick-dots {
+				position: absolute;
+				width: 500px;
+				cursor: pointer;
+				display: flex;
+				justify-content:center;
+				align-content:center;
+				align-items:center;
+				text-align: center;
+				left:50%;
+				top:90%;
+				z-index: 999;
+				color: $cream;
+				transform: translate(-50%, -90%);
+				font-size: 20px;
+				// padding-top: 200px;
+				@include breakpoint($phone) {
+					padding-top: 125px;
+					width: 300px;
+					max-width: 300px;
+				}
+				li {
+					padding:0 10px;
+				}
+				li.slick-active {
+					list-style: disc;
+					color: $cream;
+				}
+				button {
+					visibility: hidden;
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+.comin {
+	display: none;
+	position: absolute;
+	top:40%;
+	left:45%;
+	width: 300px;
+	height: 200px;
+	background-color: $cream;
+	z-index: 999;
+	border: 1px solid rgba(48,21,14,1); 
+	p {
+		font-family: 'Lato', sans-serif;
+		font-weight: 300;
+		letter-spacing: .025em;
+		text-transform: uppercase;
+		position: relative;
+		display: flex;
+		justify-content:center;
+		align-content:center;
+		align-items:center;
+		text-align: center;
+		font-size: 20px;
+		line-height: 25px;
+		color:rgba(48,21,14,1);
+		margin:0;
+		padding:0;
+		top:50%;
+		transform: translateY(-50%);
+	}
+	span {
+		width: 5px;
+	}
+}
